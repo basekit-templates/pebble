@@ -1,2 +1,3 @@
-pebble
-======
+
+Blog theme
+==========
