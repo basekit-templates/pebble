@@ -1,3 +1,3 @@
 
-Blog theme
-==========
+Pebble - Blog template
+======================
