@@ -34,6 +34,17 @@
 </header>
 
 <div class="main wrapper clearfix">
+
+    <div class="header-search-mobile">
+        <div id="page-zones__main-widgets__blogsearch1" class="widget blogsearch">
+        <form class="blog-search-form">
+            <label for="search-term">Search posts</label>
+            <input id="search-term" name="searchTerm" class="blog-search-input" type="search">
+            <button class="blog-search-submit-button" type="submit">Search</button>
+        </form>
+        </div>
+    </div><!-- end header-search-mobile -->
+
         {{widget('bloglistposts', 'bloglistposts1', {})|raw}}
 </div> 
 
