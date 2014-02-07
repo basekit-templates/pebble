@@ -1,7 +1,7 @@
 {
     "name":"pebble",
-    "thumbnail":"ipsum.png",
-    "screenshot":"ipsum.png",
+    "thumbnail":"pebble.png",
+    "screenshot":"pebble.png",
     "pageTypes":["menu","blogpost","bloglistposts"],
     "tags": {
     "en": ["blog"],
@@ -20,40 +20,40 @@
             "color7":"#DBD9D9"
         },
         "Swatch 2": {
-            "color1":"#251f21",
-            "color2":"#fbfbf6",
-            "color3":"#db1f1f",
-            "color4":"#3a2a2a",
-            "color5":"#6b5a5a",
-            "color6":"#ffffff",
-            "color7":"#251f21"
+            "color1":"#f2f2f2",
+            "color2":"#ffffff",
+            "color3":"#69D3A8",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#9e9e9e",
+            "color7":"#DBD9D9"
         },
         "Swatch 3": {
-            "color1":"#251f21",
+            "color1":"#f2f2f2",
             "color2":"#ffffff",
-            "color3":"#314f8b",
-            "color4":"#1e3563",
-            "color5":"#2f3343",
-            "color6":"#ffffff",
-            "color7":"#251f21"
+            "color3":"#E097BB",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#9e9e9e",
+            "color7":"#DBD9D9"
         },
         "Swatch 4": {
-            "color1":"#251f21",
+            "color1":"#f2f2f2",
             "color2":"#ffffff",
-            "color3":"#ac3c0a",
-            "color4":"#2c3034",
-            "color5":"#2c3034",
-            "color6":"#ffffff",
-            "color7":"#251f21"
+            "color3":"#f48e3d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#9e9e9e",
+            "color7":"#DBD9D9"
         },
         "Swatch 5": {
-            "color1":"#251f21",
+            "color1":"#f2f2f2",
             "color2":"#ffffff",
-            "color3":"#720c42",
-            "color4":"#431f32",
-            "color5":"#291515",
-            "color6":"#ffffff",
-            "color7":"#251f21"
+            "color3":"#6a9de1",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#9e9e9e",
+            "color7":"#DBD9D9"
         }
     },
     "fontSwatch": {
