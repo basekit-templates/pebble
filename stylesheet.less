@@ -644,7 +644,7 @@ hr {
     }
 }/* end blog-post-item */
 
-.bk-pt-default .blog-post-item {
+.bk-pt-default .widget.bloglistposts .blog-post-item {
     border-bottom: 2px solid @color-swatch1;
 }
 
@@ -686,7 +686,6 @@ hr {
 .blog-list-footer {
     background-color: @color-swatch7;
     padding: 1em;
-    text-align: left;
     a {
         font-family: @font-swatch5-font-family;
         font-size: @font-swatch5-font-size;
@@ -694,12 +693,23 @@ hr {
         line-height: @font-swatch5-line-height;
         color: @font-swatch6-color;
         letter-spacing: @font-swatch5-letter-spacing;
-        padding-left: 1.1em;
-        &:before {
-            content:"\25C4";
-            position: absolute;
-            left: 1em;
-        }
+        position: relative;
+    }
+    .blog-post-pagination-page.paginate-older {
+            padding-left: 1em;
+            &:before {
+                content:"\25C4";
+                position: absolute;
+                left: 0;
+            }
+    }
+    .blog-post-pagination-pagepaginate-newer {
+            padding-right: 1em;
+            &:after {
+                content:"\25BA";
+                position: absolute;
+                right: 0;
+            }
     }
 }
 
