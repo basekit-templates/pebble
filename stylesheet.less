@@ -40,6 +40,9 @@ body {
         padding-bottom: 1.5em;
         padding-left: 0;
     }
+    .widget {
+        clear: both;
+    }
 }
 
 .wrapper {
@@ -64,8 +67,10 @@ header {
     text-align: center;
     padding: 0;
     margin-top: 1em;
+    clear: both;
     @media only screen and (max-width: 650px) {
         margin-top:0;
+        background-color: @color-swatch7;
     }
     .wrapper {
         position: relative;
@@ -89,7 +94,7 @@ header {
                 margin: 0 auto -70px;
                 overflow: hidden;
                 @media only screen and (max-width: 650px) {
-                    margin: 0 auto;
+                    margin: 1em auto 0;
                 }
                 img {
                     width: 100%;
@@ -109,19 +114,21 @@ header {
                 margin: 0;
             }
             .header-companyname {
-                background-color: @color-swatch6;
+                background-color: @color-swatch7;
                 width: 50%;
                 float: left;
                 @media only screen and (max-width: 650px) {
                     width: 100%;
-                    background-color: transparent;
+                    margin: 0 auto;
+                    background-color: @color-swatch7;
                 }
                 .companyname {
                     text-align: left;
                     min-height: 5em;
                     @media only screen and (max-width: 650px) {
-                        width:85%;
+                        width:100%;
                         z-index: 9999;
+                        text-align: center;
                     }
                     a {
                         padding: 1em 4em 1em 1em;
@@ -137,10 +144,9 @@ header {
                             text-decoration: none;
                         }
                         @media only screen and (max-width: 650px) {
-                            color:@color-swatch6;
                             font-size: bkscale(@font-swatch10-font-size,0.8);
                             line-height: bkscale(@font-swatch10-line-height,0.8);
-                            padding: 8% 5% 3%;
+                            padding: 5%;
                         }
                     }
                 } /* end companyname a */
@@ -246,36 +252,14 @@ header {
 .header-search {
     float: right;
     width: 50%;
-    background-color: @color-swatch7;
+    background-color: @color-swatch6;
     min-height: 5em;
     @media only screen and (max-width: 650px) {
         width:100%;
         float: none;
         min-height: 0px;
-        background-color: @color-swatch1;
-    }
-}
-
-.header-search-mobile {
-    display: none;
-     @media only screen and (max-width: 650px) {
-        display: block;
-    }
-    .widget {
-        &.blogsearch {
-            .blog-search-form {
-                width: 90%;
-                margin: 5% 5% 0;
-                input {
-                    width: 90%;
-                    height: 40px;
-                }
-                button {
-                    width: 10%;
-                    height: 40px;
-                }
-            }
-        }
+        background-color: @color-swatch7;
+        clear: both;
     }
 }
 
@@ -283,6 +267,10 @@ header {
     &.blogsearch {
         padding: 1.2em 1em 0;
         text-align: right;
+        @media only screen and (max-width: 650px) {
+            width: 90%;
+            margin: 0 5%;
+        }
         .blog-search-form {
             label{
                 display: none;
@@ -292,18 +280,28 @@ header {
                 border: none;
                 height: 35px;
                 margin: 0;
+                @media only screen and (max-width: 650px) {
+                    width: 80%;
+                    height: 45px;
+                }
             }
             button {
                 background-image:image('/images/search-icon.png');
                 background-repeat: no-repeat;
                 background-position: center;
                 border: none;
+                border-left: 2px solid @color-swatch7;
                 background-color: transparent;
                 text-indent: -9999px;
                 width: 25px;
                 height: 35px;
                 background-color: @color-swatch1;
                 padding: 0;
+                @media only screen and (max-width: 650px) {
+                    width: 20%;
+                    height: 45px;
+                    margin-bottom: 2em;
+                }
             }
         }
     }
@@ -365,7 +363,7 @@ header {
                 width: 100%;
                 border-top: 1px solid @color-swatch7;
                 margin: 0;
-                padding: 40px 0 0;
+                padding: 40px 0 20px;
             }
             li {
                 float: left;
@@ -374,12 +372,20 @@ header {
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted fade(@color-swatch5, 25%);
+                    border-bottom: 1px dotted @color-swatch7;
                     background-color: @color-swatch1;
+                }
+                &:first-child {
+                    @media @tablet {
+                        border-top: 1px dotted @color-swatch7;
+                    }
                 }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 1px solid fade(@color-swatch5, 25%);
+                        margin-bottom: 2em;
+                    }
+                    @media @mobile {
+                        margin-bottom: none;
                     }
                 }
 
@@ -388,7 +394,7 @@ header {
                         display: block !important;
                         position: absolute;
                         background-color: @color-swatch1;
-                        border: 1px solid fade(@color-swatch3, 25%);
+                        border: 1px solid @color-swatch7;
                         z-index: 500;
                         padding: 0;
                         margin: 7px 0 0 0;
@@ -422,9 +428,6 @@ header {
                             color: @color-swatch5;
                         }
                     }
-                    @media @tablet {
-                        color: @color-swatch5;
-                    }
                 }
 
                 &.folder {
@@ -452,13 +455,9 @@ header {
                             color: @color-swatch6;
                             @media @tablet {
                                 font-size: 10px;
-                                color: @color-swatch3;
                                 padding-right: 10px;
                             }
                         }
-                        @media @tablet {
-                                color: @color-swatch5;
-                            }
                         &:hover {
                             color: @font-swatch6-color-hover;
                             text-decoration: none;
@@ -480,6 +479,12 @@ header {
                                         content: "";
                                     }
                                 }
+                            }
+                            &:first-child {
+                                border-top: none;
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
                             }
                         }
                     }
