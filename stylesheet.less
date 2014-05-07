@@ -21,9 +21,9 @@ body {
 }
 
 .main {
-    padding-top: 0 !important;
+    padding-top: 0;
     padding-right: 0;
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
     background-color: @color-swatch2;
@@ -71,21 +71,22 @@ header {
         position: relative;
         .widget.logo {
             width: 20%;
-            float: left;
-            z-index: 99999;
+            z-index: 999;
+            margin: 0 auto;
             @media only screen and (max-width: 650px) {
                 width: 100%;
+                background-color: @color-swatch7;
+                clear: both;
             }
             .logo {
                 text-align: center;
                 float: none;
-                background-color: @color-swatch1;
                 -webkit-border-radius: 200px;
                 -moz-border-radius: 200px;
                 border-radius: 200px;
                 width: 130px;
                 height: 130px;
-                margin: 0 auto -64px;
+                margin: 0 auto -70px;
                 overflow: hidden;
                 @media only screen and (max-width: 650px) {
                     margin: 0 auto;
@@ -117,7 +118,7 @@ header {
                 }
                 .companyname {
                     text-align: left;
-                    min-height: 4em;
+                    min-height: 5em;
                     @media only screen and (max-width: 650px) {
                         width:85%;
                         z-index: 9999;
@@ -148,23 +149,6 @@ header {
     } /*end wrapper*/
 } /*end header*/
 
-.logo-back {
-    @media only screen and (max-width: 650px) {
-        background-color: @color-swatch6;
-        height: 130px;
-        width: 100%;
-        position: absolute;
-    }
-    .logo-back-right {
-        @media only screen and (max-width: 650px) {
-            width: 50%;
-            float: right;
-            background-color: @color-swatch7;
-            height: 130px;
-        }
-    }
-
-}
 
 /* HEADER - SOCIAL ICONS */
 
@@ -258,11 +242,17 @@ header {
 
 /* SEARCH WIDGET */
 
+
 .header-search {
     float: right;
-    width: 40%;
+    width: 50%;
+    background-color: @color-swatch7;
+    min-height: 5em;
     @media only screen and (max-width: 650px) {
-        display: none;
+        width:100%;
+        float: none;
+        min-height: 0px;
+        background-color: @color-swatch1;
     }
 }
 
@@ -291,20 +281,17 @@ header {
 
 .widget {
     &.blogsearch {
-        padding: 0.8em 0;
+        padding: 1.2em 1em 0;
         text-align: right;
         .blog-search-form {
             label{
                 display: none;
             }
             input {
-                border-top: 1px solid @color-swatch6;
-                border-left: 1px solid @color-swatch6;
-                border-bottom: 1px solid @color-swatch6;
-                border-right: 0;
-                background-color: transparent;
-                height: 30px;
-                margin: 0 -5px 0 0;
+                background-color: @color-swatch1;
+                border: none;
+                height: 35px;
+                margin: 0;
             }
             button {
                 background-image:image('/images/search-icon.png');
@@ -314,10 +301,9 @@ header {
                 background-color: transparent;
                 text-indent: -9999px;
                 width: 25px;
-                height: 30px;
-                border-top: 1px solid @color-swatch6;
-                border-right: 1px solid @color-swatch6;
-                border-bottom: 1px solid @color-swatch6;
+                height: 35px;
+                background-color: @color-swatch1;
+                padding: 0;
             }
         }
     }
@@ -327,18 +313,7 @@ header {
 /* ===============================
    EXTENDED NAVIGATION
    =============================== */
-nav {
-    float: right;
-    width: 50%;
-    background-color: @color-swatch7;
-    min-height: 4em;
-    @media only screen and (max-width: 650px) {
-        width:100%;
-        float: none;
-        min-height: 0px;
-        background-color: @color-swatch1;
-    }
-}
+
 
   #page-zones__template-widgets__extendednavigation-navigationheader {
     overflow: visible;
@@ -348,20 +323,30 @@ nav {
     min-height: 4em;
   }
 
-.widget {
+
+.nav-extended.wrapper {
+    @media @tablet {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.widget.extendednavigation {
+    max-width: 100%;
+    min-height: 40px;
+    z-index: 9999;
     .extendednavigation {
         float: none;
-        position: absolute;
-        z-index: 999;
-        width: 100%;
-        min-height: 4em;
-        background-color: @color-swatch7;
-        @media @tablet {
-            background-color: transparent;
+        position: relative;
+        width: 90%;
+        margin: 0 5%;
+        @media only screen and (min-width: 1140px) {
+            width: 1024px;
+            margin: 0 auto;
         }
-        @media only screen and (max-width: 650px) {
-            position:relative;
-
+        @media @mobile {
+            width: 100%;
+            margin: 0 auto;
         }
         li {
             ul {
@@ -370,34 +355,31 @@ nav {
         }
         ul {
             display: table;
-            float: right;
-            margin: 0;
+            float: none;
+            margin: 0 auto;
             text-align: center;
-            padding: 1em;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
+                border-top: 1px solid @color-swatch7;
                 margin: 0;
-                padding: 50px 0 0;
-            }
-            @media only screen and (max-width: 650px) {
-                padding: 0;
+                padding: 40px 0 0;
             }
             li {
                 float: left;
                 display: block;
                 padding: 5px 0;
-                background-color: @color-swatch7;
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch2;
+                    border-bottom: 1px dotted fade(@color-swatch5, 25%);
+                    background-color: @color-swatch1;
                 }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 0;
+                        border-bottom: 1px solid fade(@color-swatch5, 25%);
                     }
                 }
 
@@ -405,7 +387,8 @@ nav {
                     ul {
                         display: block !important;
                         position: absolute;
-                        background-color: @color-swatch7;
+                        background-color: @color-swatch1;
+                        border: 1px solid fade(@color-swatch3, 25%);
                         z-index: 500;
                         padding: 0;
                         margin: 7px 0 0 0;
@@ -415,6 +398,7 @@ nav {
                                 .box-sizing {
                                     a {
                                         display: block;
+                                        color: @color-swatch5;
                                         padding: 0;
                                     }
                                 }
@@ -433,7 +417,13 @@ nav {
                     letter-spacing: @font-swatch6-letter-spacing;
                     &:hover {
                         color: @font-swatch6-color-hover;
-                        text-decoration: none;
+                        text-decoration: underline;
+                        @media @tablet {
+                            color: @color-swatch5;
+                        }
+                    }
+                    @media @tablet {
+                        color: @color-swatch5;
                     }
                 }
 
@@ -441,19 +431,13 @@ nav {
                     /* Folder dropdown arrow BG style goes Here */  
                     margin-right: 20px;            
                     cursor: pointer;
-                    background-image: none;
-                    @media @tablet {
-                        background-image:image('/images/texture-background.png');
-                        background-repeat: repeat;
-                        background-position: center;
-                    }
                     .text {
                         display: block;
                         padding: 0 15px;
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
                         font-weight: @font-swatch6-font-weight;
-                        color: @font-swatch6-color !important;
+                        color: @font-swatch6-color;
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
                         position: relative;
@@ -468,6 +452,7 @@ nav {
                             color: @color-swatch6;
                             @media @tablet {
                                 font-size: 10px;
+                                color: @color-swatch3;
                                 padding-right: 10px;
                             }
                         }
@@ -504,33 +489,37 @@ nav {
         }
 
         a {
-           &.pull {
-               display: none;
-               @media @tablet {
-                   display: block;
-                   position: absolute;
-                   margin-right: 10px;
-                   top: 10px;
-                   right: 0;
-                   width: 20px;
-                   height: 44px;
-                   &:hover {
+            &.pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    margin: 0;
+                    width: 20px;
+                    height: 44px;
+                    position: absolute;
+                    top: -3px;
+                    left: 48.5%;
+                    &:hover {
                        cursor: pointer;
-                   }
-                   &:after {
+                    }
+                    &:after {
                         content: '';
                         position: absolute;
                         width: 100%;
                         height: 3px;
-                        background: @color-swatch6;
+                        background: @color-swatch5;
                         top: 15px;
                         left: 0;
-                        box-shadow: 0 6px 0 @color-swatch6, 0 12px 0 @color-swatch6;
-                   }
-               }
-           }
-       }
+                        box-shadow: 0 6px 0 @color-swatch5, 0 12px 0 @color-swatch5;
+                    }
+                }
+            }
+        }
     }
+}
+
+.widget .extendednavigation ul li.folder:after {
+    display: none;
 }
 
 /* ===============================
