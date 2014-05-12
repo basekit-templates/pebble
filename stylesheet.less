@@ -12,15 +12,8 @@ body {
     background-size: cover;
 }
 
-.bk-pt-default .main, .bk-pt-gallery .main  {
-    background-color: @color-swatch2;
-    .canvas {
-        width: 90%;
-        margin: 5% 5%;
-    }
-}
-
 .main {
+    background-color: @color-swatch2;
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -39,6 +32,10 @@ body {
         padding-right: 0;
         padding-bottom: 1.5em;
         padding-left: 0;
+    }
+    .canvas {
+        width: 90%;
+        margin: 5% 5%;
     }
     .widget {
         clear: both;
@@ -808,7 +805,7 @@ hr {
                 }
                 @media only screen and (max-width: 550px) {
                     width: 100%;
-                    border-top: 1px dotted darken(@color-swatch1,20%);
+                    border-top: 1px dotted @color-swatch7;
                     padding: 15px 0 10px 0;
                 }
                 a {
@@ -861,13 +858,13 @@ hr {
 
             /* SECTION AND SUB-SECTION HEADERS */
                 .menu-header {
-                    border-top: 1px dotted darken(@color-swatch1,20%);
+                    border-top: 1px dotted @color-swatch7;
                 }
 
                 .menu-header, .menu-subsection-header {
                     margin: 0;
                     padding: 3em 0;
-                    border-bottom: 1px dotted darken(@color-swatch1,20%);
+                    border-bottom: 1px dotted @color-swatch7;
                     text-align: center;
                     @media @mobile {
                         padding: 2em 0;
@@ -970,7 +967,7 @@ hr {
                         .inner-item {
                             display: inline-block;
                             width:100%;
-                            border-bottom: 1px dotted darken(@color-swatch1,20%);
+                            border-bottom: 1px dotted @color-swatch7;
                             padding: 2em 0;
                             h3 { /* menu-item-name */  
                                 padding: 0;
