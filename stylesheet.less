@@ -77,28 +77,21 @@ header {
             -moz-border-radius: 200px;
             border-radius: 200px;
             width: 130px;
+            height: 130px;
             z-index: 999;
-            margin: 0 auto;
             background-color: @color-swatch2;
+            text-align: center;
+            float: none;
+            margin: 0 auto -70px;
+            overflow: hidden;
             @media @tablet {
                 width: 100%;
                 background-color: @color-swatch7;
                 clear: both;
             }
             .logo {
-                text-align: center;
-                float: none;
-                margin: 0 auto -70px;
-                overflow: hidden;
                 @media @tablet {
                     margin: 2em auto 0;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
-                    -webkit-border-radius: 200px;
-                    -moz-border-radius: 200px;
-                    border-radius: 200px;
                 }
             }
         }
