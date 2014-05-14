@@ -84,15 +84,20 @@ header {
             float: none;
             margin: 0 auto -70px;
             overflow: hidden;
+            display: table;
+            a {
+                display: table-cell;
+                vertical-align: middle;
+                .logo {
+                    @media @tablet {
+                        margin: 2em auto 0;
+                    }
+                }
+            }
             @media @tablet {
                 width: 100%;
                 background-color: @color-swatch7;
                 clear: both;
-            }
-            .logo {
-                @media @tablet {
-                    margin: 2em auto 0;
-                }
             }
         }
         .companyheader {
