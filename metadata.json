@@ -2,6 +2,7 @@
     "name":"pebble",
     "thumbnail":"pebble.png",
     "screenshot":"pebble.png",
+    "templateType":"blog",
     "pageTypes":["menu","blogpost","blogpostlist"],
     "tags": {
     "en": ["blog"],
