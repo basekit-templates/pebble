@@ -2,7 +2,7 @@
     "name":"pebble",
     "thumbnail":"pebble.png",
     "screenshot":"pebble.png",
-    "pageTypes":["menu","blogpost","bloglistposts"],
+    "pageTypes":["menu","blogpost","blogpostlist"],
     "tags": {
     "en": ["blog"],
     "es": ["blog"],
