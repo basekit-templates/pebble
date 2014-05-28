@@ -234,13 +234,13 @@ header {
    =============================== */
 
 
-  #page-zones__template-widgets__extendednavigation-navigationheader {
+#page-zones__template-widgets__extendednavigation-navigationheader {
     overflow: visible;
-  }
+}
 
-  .bk-overlay.hover {
+.bk-overlay.hover {
     min-height: 4em;
-  }
+}
 
 
 .nav-extended.wrapper {
@@ -260,7 +260,7 @@ header {
         margin: 0 5%;
         @media only screen and (min-width: 1140px) {
             width: 1024px;
-            margin: 0 auto;
+            margin: 2em auto 0;
         }
         @media @mobile {
             width: 100%;
@@ -603,7 +603,7 @@ hr {
 }
 
 /* ===============================
-  WIDGET BLOG LIST POSTS
+   BLOG LIST POSTS
    =============================== */
 
 .widget {
@@ -624,6 +624,7 @@ hr {
     padding: 5% 20% 7%;
     display: inline-block;
     text-align: center;
+    width: 100%;
     @media only screen and (max-width: 950px) {
         padding: 5% 15% 7%;
     }
@@ -647,21 +648,6 @@ hr {
             min-height: 200px;
         }
     }/* end blog-post-feature-image-wrap */
-    h2 {
-        margin-top: 0;
-        a {
-            font-family: @font-swatch2-font-family;
-            font-size: @font-swatch2-font-size;
-            font-weight: @font-swatch2-font-weight;
-            line-height: @font-swatch2-line-height;
-            color: @font-swatch2-color;
-            letter-spacing: @font-swatch2-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
     p {
         font-family: @font-swatch5-font-family;
         font-size: @font-swatch5-font-size;
@@ -679,6 +665,7 @@ hr {
         color: @color-swatch3;
         letter-spacing: @font-swatch5-letter-spacing;
         text-decoration: none;
+        padding-right: 0;
         &:hover {
                 text-decoration: underline;
             }
@@ -686,12 +673,15 @@ hr {
     .blog-post-more-link {
         color: @font-swatch5-color;
         position: relative;
-        padding-right: 15px;
+        padding-right: 0;
+        padding-bottom: 0;
+        a {
+            padding-right: 5px;
+        }
         &:after {
             content:"\25BA";
             color: @color-swatch3;
             position: absolute;
-            right: 0;
             font-size: 10px;
             padding-top: 2px;
         }
@@ -701,6 +691,20 @@ hr {
         float: left;
     }
 }/* end blog-post-item */
+
+h1.blog-post-title, h2.blog-post-title a { /* style for both H2 and H1 */
+    margin-top: 0;
+    font-family: @font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    font-weight: @font-swatch2-font-weight;
+    line-height: @font-swatch2-line-height;
+    color: @font-swatch2-color;
+    letter-spacing: @font-swatch2-letter-spacing;
+    text-decoration: none;
+}
+h2.blog-post-title a:hover {
+    text-decoration: underline;
+}
 
 .bk-pt-default .widget.blogpostlist .blog-post-item {
     border-bottom: 2px solid @color-swatch1;
@@ -835,6 +839,7 @@ hr {
 
 .widget {
     &.menu {
+        .clearfix;
         .main {
             padding: 0;
             margin-bottom: 40px;
