@@ -255,7 +255,6 @@ header {
     min-height: 40px;
     z-index: 9999;
     .extendednavigation {
-        float: none;
         position: relative;
         width: 90%;
         margin: 0 5%;
@@ -274,7 +273,6 @@ header {
         }
         ul {
             display: table;
-            float: none;
             margin: 0 auto;
             text-align: center;
             @media @tablet {
@@ -287,8 +285,7 @@ header {
                 padding: 40px 0 20px;
             }
             li {
-                float: left;
-                display: block;
+                display: inline-block;
                 padding: 5px 0;
                 @media @tablet {
                     width: 100%;
