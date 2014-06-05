@@ -84,21 +84,21 @@ header {
             float: none;
             margin: 0 auto -70px;
             overflow: hidden;
-            display: -webkit-flex;
-            display: -webkit-flexbox;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
             text-align: center;
+            position: relative;
             a {
                 margin: 0 auto;
-                display: inline-block;
                 .logo {
                     max-width: 130px;
                     max-height: 130px;
+                    img {
+                        margin: auto;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
                 }
             }
             @media @tablet {
