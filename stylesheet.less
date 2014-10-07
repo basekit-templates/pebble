@@ -266,12 +266,12 @@ header {
     .extendednavigation {
         position: relative;
         width: 90%;
-        margin: 0 5%;
+        margin: 2em 5% 0;
         @media only screen and (min-width: 1140px) {
             width: 1024px;
             margin: 2em auto 0;
         }
-        @media @mobile {
+        @media @tablet {
             width: 100%;
             margin: 0 auto;
         }
@@ -281,16 +281,13 @@ header {
             }
         }
         ul {
-            display: table;
             margin: 0 auto;
             @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
                 /* Then these styles are applied */
                 width: 100%;
                 border-top: 1px solid @color-swatch7;
                 margin: 0;
-                padding: 40px 0 20px;
+                padding: 40px 0 0px;
             }
             li {
                 display: inline-block;
@@ -308,10 +305,7 @@ header {
                 }
                 &:last-child {
                     @media @tablet {
-                        margin-bottom: 2em;
-                    }
-                    @media @mobile {
-                        margin-bottom: none;
+                        margin-bottom: 0;
                     }
                 }
 
