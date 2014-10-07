@@ -183,13 +183,16 @@ header {
 
 .widget {
     &.blogsearch {
-        padding: 1.2em 1em 0;
+        padding: 1.2em 1em;
         text-align: right;
         @media @tablet {
             width: 90%;
             margin: 0 5%;
         }
         .blog-search-form {
+            width: auto;
+            float: right;
+            background-color: @color-swatch1;
             label{
                 display: none;
             }
@@ -203,7 +206,7 @@ header {
                 margin: 0;
                 @media @tablet {
                     width: 80%;
-                    height: 45px;
+                    height: 46px;
                 }
             }
             button {
@@ -218,11 +221,16 @@ header {
                 height: 35px;
                 background-color: @color-swatch1;
                 padding: 0;
+                cursor: pointer;
                 @media @tablet {
                     width: 20%;
                     height: 45px;
                     margin-bottom: 2em;
                 }
+            }
+            @media @tablet {
+                float: none;
+                height: 46px;
             }
         }
     }
