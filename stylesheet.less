@@ -447,6 +447,40 @@ header {
     display: none;
 }
 
+
+/* ========
+    BUTTONS
+    ======= */
+
+.feature-btn button.btn,
+.widget.button button,
+button.btn, 
+.btn,
+.widget.profile form button, 
+.signupform fieldset button, 
+.contactform button.btn, 
+.blogsearch form button, 
+.checkout-order-button, 
+.checkout-empty-link,
+.widget.tweet a,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.dropbox button,
+.form-group.productlist-search .btn,
+.widget.ecombasket .ecombasket-pull,
+a.btn.ecombasket-summary-link,
+a.basket-summary-empty-cta.btn,
+.btn.basket-summary-submit {
+    font-family: @font-swatch7-font-family;
+    color: @font-swatch7-color;
+    font-size: @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    background-color: @font-swatch7-background-color;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
+} 
+
 /* ===============================
   BLOCKQOUTE
    =============================== */
@@ -683,6 +717,7 @@ hr {
         position: relative;
         padding-right: 0;
         padding-bottom: 0;
+        margin: 1.5em 0 2em;
         a {
             padding-right: 5px;
         }
@@ -1246,7 +1281,18 @@ h2.blog-post-title a:hover {
             }
         }
     }
+    a.ecombasket-summary-link {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        padding: 12px 18px;
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
+        }
+    }
 }
+
+
 
 /* ===============================
   ECOM - PRODUCTLIST
@@ -1418,6 +1464,13 @@ h2.blog-post-title a:hover {
     }
 }
 
+a.ecom-product-go-to-checkout-btn {
+    text-decoration: none;
+    padding: 12px 18px;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
+}
 
 /* ====================
   ECOM - BASKET SUMMARY
