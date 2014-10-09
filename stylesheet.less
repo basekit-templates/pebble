@@ -1241,50 +1241,35 @@ h2.blog-post-title a:hover {
     }
 }
 
-
-
 /* ===============================
   ECOM - PRODUCTLIST
    =============================== */
 .widget.ecomproductslist {
-    text-align: center;
     .productlist-display-form {
-        text-align: left;
-        width: 74%;
-        margin: 1% 0 3.5% 3%;
-        display: inline-block;
-        @media only screen and (max-width: 830px) {
-            width: 100%;
-            margin: 1% 0 0 3%;
+      position: relative;
+      select {
+        height: 42px;
+        border: 1px solid darken(@color-swatch2,25%);
+        position: relative;
+        background: transparent;
+      }
+      label {
+        display: block;
+      }
+      .productlist-search {
+        position: absolute;
+        bottom: 0;
+        input {
+          height: 42px;
+          border: 1px solid darken(@color-swatch2,25%);
+          margin-right: 5px;
         }
-        @media only screen and (max-width: 600px) {
-            background-color: darken(@color-swatch1,3%);
-            margin-left: 3%;
-            margin-bottom: 20px;
-            width: 97%;
-            padding: 3em;
+        button {
+          height: 42px;
+          position: absolute;
+          bottom: 0;
         }
-        @media @mobile {
-            margin-left: 0;
-        }
-        .form-group {
-            display: inline-block;
-            @media only screen and (max-width: 600px) {
-                width:100%;
-            }
-            label {
-                display: inline-block;
-                @media only screen and (max-width: 600px) {
-                    width:100%;
-                }
-            }
-            select {
-                display: inline-block;
-                @media only screen and (max-width: 600px) {
-                    width:100%;
-                }
-            }
-        }
+      }
     }
     .productlist-item-count {
         width: 22%;
@@ -1408,7 +1393,8 @@ h2.blog-post-title a:hover {
                 width: 100%;
             }
             select {
-                -webkit-appearance: menulist;
+                height: 42px;
+                border: 1px solid darken(@color-swatch2,25%);
             }
         }
         .btn {
