@@ -1329,12 +1329,20 @@ h2.blog-post-title a:hover {
         label {
             display: block;
         }
-        @media @mobile {
-            select, input, label, button {
-                width: 100%;
+        @media @tablet {
+            select, input {
+                width: 50%;
             }
             input {
                 margin-bottom: 10px;
+            }
+            button {
+                display: block;
+            }
+        }
+        @media @mobile {
+            select, input, label, button {
+                width: 100%;
             }
         }
       .productlist-search {
@@ -1372,7 +1380,7 @@ h2.blog-post-title a:hover {
     margin-top: 2em;
     .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap {
         margin-bottom: 1em;
-        background-color: @color-swatch2;
+        background-color: @color-swatch2 !important;
         @media @mobile {
             background-image: none !important;
             height: auto !important;
