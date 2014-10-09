@@ -1299,33 +1299,42 @@ h2.blog-post-title a:hover {
    =============================== */
 .widget.ecomproductslist {
     .productlist-display-form {
-      position: relative;
-      select {
-        height: 42px;
-        border: 1px solid darken(@color-swatch2,25%);
         position: relative;
-        background: transparent;
-      }
-      label {
-        display: block;
-      }
+        select {
+            height: 42px;
+            border: 1px solid darken(@color-swatch2,25%);
+            position: relative;
+            background: transparent;
+        }
+        label {
+            display: block;
+        }
+        @media @mobile {
+            select, input, label, button {
+                width: 100%;
+            }
+            input {
+                margin-bottom: 10px;
+            }
+        }
       .productlist-search {
-        position: absolute;
-        bottom: 0;
-        input {
-          height: 42px;
-          border: 1px solid darken(@color-swatch2,25%);
-          margin-right: 5px;
-        }
-        button {
-          height: 42px;
-          bottom: 0;
-        }
+            position: absolute;
+            bottom: 0;
+            input {
+              height: 42px;
+              border: 1px solid darken(@color-swatch2,25%);
+              margin-right: 5px;
+            }
+            button {
+              height: 42px;
+              bottom: 0;
+            }
+            @media only screen and (max-width: 950px) {
+                position: relative;
+            }
       }
     }
     .productlist-item-count {
-        width: 22%;
-        text-align: right;
         display: inline-block;
         margin-left: 0;
         @media only screen and (max-width: 830px) {
@@ -1338,66 +1347,84 @@ h2.blog-post-title a:hover {
             margin-left: 5px;
         }
     }
-    .ecom-productslist-product {
-        background: @color-swatch2;
-        padding: 1.5em;
-        @media @tablet {
-            width: 30.36%;
-            padding: 1em;
-        }
-        @media only screen and (max-width: 650px) {
-            width: 47%;
-        }
+}
+.ecom-productslist-product, .ecom-featuredproducts-product {
+    margin-top: 2em;
+    .ecom-productslist-image-wrap, .ecom-featuredproducts-image-wrap {
+        margin-bottom: 1em;
+        background-color: @color-swatch2;
         @media @mobile {
-            width: 100%;
-        }
-        .ecom-productslist-image-wrap {
-            height: 281px;
-            background-color: @color-swatch2;
-            @media only screen and (max-width: 1030px) {
-                height:241px;
-            }
-            @media only screen and (max-width: 900px) {
-                height:210px;
-            }
-            @media @tablet {
-                height: 175px;
-            }
-            @media only screen and (max-width: 690px) {
-                height: 155px;
-            }
-            @media only screen and (max-width: 650px) {
-                height: 242px;
-            }
-            @media only screen and (max-width: 580px) {
-                height: 213px;
-            }
-            @media only screen and (max-width: 515px) {
-                height: 198px;
-            }
-            @media @mobile {
-                height: 250px;
+            background-image: none !important;
+            height: auto !important;
+            img {
+                display: block !important;
+                max-width: 100%;
             }
         }
-        .ecom-productlist-info {
-            text-align: left;
-            padding-top: 20px;
-            .ecom-productslist-title {
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                font-weight: @font-swatch5-font-weight;
-                line-height: @font-swatch5-line-height;
-                letter-spacing: @font-swatch5-letter-spacing;
-                a {
-                    color: @font-swatch5-color;
-                }
-            }
-            .ecom-productlist-price {
-                font-weight: 700;
+    }
+    .ecom-productlist-info, .ecom-featuredproducts-info {
+        padding-top: 1em;
+        border-top: 1px solid darken(@color-swatch2,7%);
+        @media @mobile {
+            border-top: none;
+            padding-top: 0;
+        }
+        .ecom-productslist-title, .ecom-featuredproducts-title {
+            font-family: @font-swatch3-font-family;
+            font-size: @font-swatch3-font-size;
+            font-weight: @font-swatch3-font-weight;
+            line-height: @font-swatch3-line-height;
+            color: @font-swatch3-color;
+            padding: 0;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+        .ecom-productlist-info, .ecom-featuredproducts-info {
+            .ecom-productslist-title, .ecom-featuredproducts-title {
+                color: @color-swatch3;
             }
         }
     }
 }
+.productlist-pagination {
+    margin-left: 3%;
+    border-top: 1px solid darken(@color-swatch2,7%);
+    padding-top: 1em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    .productlist-pagination-page.current {
+        color: @color-swatch3;
+        border: 1px solid @color-swatch3;
+    }
+    .productlist-pagination-page {
+        font-family: @font-swatch7-font-family;
+        color: @font-swatch7-color;
+        font-size: @font-swatch7-font-size;
+        font-weight: @font-swatch7-font-weight;
+        line-height: @font-swatch7-line-height;
+        background-color: @color-swatch2;
+        border: 1px solid darken(@color-swatch2,7%);
+        margin: 5px 10px 0 0;
+        padding: 8px 18px;
+        text-decoration: none;
+        &:hover {
+            border: 1px solid @color-swatch3;
+        }
+    }
+}
+
+
+/* FEATURED PRODUCTS */
+
+.widget.ecomfeaturedproducts {
+    margin-bottom: 4em;
+}
+.ecom-featuredproducts-header h2 {
+    text-align: center;
+    padding: 1em 0;
+}
+
 
 /* ===============================
   ECOM - PRODUCT
@@ -1414,11 +1441,11 @@ h2.blog-post-title a:hover {
     }
     .ecom-product-info {
         .ecom-product-title {
-            color: @font-swatch5-color;
-            font-size: @font-swatch5-font-size;
-            line-height: @font-swatch5-color;
-            font-weight: @font-swatch5-font-weight;
-            font-family: @font-swatch5-font-family;
+            font-family: @font-swatch3-font-family;
+            font-size: @font-swatch3-font-size;
+            font-weight: @font-swatch3-font-weight;
+            line-height: @font-swatch3-line-height;
+            color: @font-swatch3-color;
         }
         .ecom-product-price {
             color: @font-swatch2-color;
