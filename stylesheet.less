@@ -113,6 +113,7 @@ header {
             @media @tablet {
                 width: 100%;
                 margin: 0;
+                background-color: @color-swatch7;
             }
             .header-companyname {
                 background-color: @color-swatch7;
@@ -168,12 +169,43 @@ header {
     width: 50%;
     background-color: @color-swatch6;
     min-height: 5em;
+    .widget.blogsearch {
+        padding: 1.2em 1em;
+        height: 35px;
+        .blog-search-form {
+            float: right;
+            height: 35px;
+            input {
+                height: 35px;
+                width: auto;
+            }
+            button {
+                height: 35px;
+                width: 25px;
+            }
+        }
+    }
     @media @tablet {
-        width:100%;
+        width: 100%;
         float: none;
         min-height: 0px;
         background-color: @color-swatch7;
         clear: both;
+        .widget.blogsearch {
+             padding: 1.2em 1em 1.5em;
+            .blog-search-form {
+                float: none;
+                input {
+                    width: 80%;
+                    height: 42px;
+                }
+                button {
+                    width: 20%;
+                    height: 42px;
+                    margin-bottom: 2em;
+                }
+            }
+        }
     }
 }
 
@@ -183,17 +215,12 @@ header {
 
 .widget {
     &.blogsearch {
-        padding: 1.2em 1em;
-        text-align: right;
-        @media @tablet {
-            width: 90%;
-            margin: 0 5%;
-            padding: 1.2em 1em 1.5em;
-        }
+        height: 42px;
+        .clearfix;
         .blog-search-form {
             width: auto;
-            float: right;
             background-color: @color-swatch1;
+            height: 42px;
             label{
                 display: none;
             }
@@ -203,12 +230,10 @@ header {
                 -moz-appearance: none;
                 background-color: @color-swatch1;
                 border: none;
-                height: 35px;
+                width: 90%;
+                height: 42px;
                 margin: 0;
-                @media @tablet {
-                    width: 80%;
-                    height: 46px;
-                }
+
             }
             button {
                 background-image:image('/images/search-icon.png');
@@ -218,20 +243,15 @@ header {
                 border-left: 2px solid @color-swatch7;
                 background-color: transparent;
                 text-indent: -9999px;
-                width: 25px;
-                height: 35px;
+                width: 10%;
+                height: 42px;
                 background-color: @color-swatch1;
                 padding: 0;
                 cursor: pointer;
-                @media @tablet {
-                    width: 20%;
-                    height: 45px;
-                    margin-bottom: 2em;
-                }
+                float: right;
             }
             @media @tablet {
                 float: none;
-                height: 47px;
             }
         }
     }
@@ -836,7 +856,7 @@ h2.blog-post-title a:hover {
         text-align: center;
         padding: 0.5em 0 0;
         min-height: 30px;
-        margin: 0;
+        margin: 2em 0 1.5em;
         @media @tablet {
             margin-top: 1.5em;
         }
