@@ -15,9 +15,12 @@
             <div class="header-companyname">
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div><!-- end header-companyname -->
-            <div class="header-search">
-                {{widget('blogsearch', 'blogsearch', {})|raw}}
-            </div><!-- end header-search -->
+            
+            {% if plugins.blog.live == true %}
+                <div class="header-search">
+                    {{widget('blogsearch', 'blogsearch', {})|raw}}
+                </div><!-- end header-search -->
+            {% endif %}
             
         </div>  <!--end companyheader-->  
 
