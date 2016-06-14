@@ -1,7 +1,7 @@
 {
     "name":"pebble",
     "thumbnail":"pebble.png",
-    "screenshot":"pebble.png",
+    "screenshot":"pebble-screenshot.jpg"
     "templateType":"blog",
     "tags": {
     "en": ["blog"],
