@@ -496,7 +496,8 @@ button.btn,
 .widget.ecombasket .ecombasket-pull,
 a.btn.ecombasket-summary-link,
 a.basket-summary-empty-cta.btn,
-.btn.basket-summary-submit {
+.btn.basket-summary-submit,
+.advancedcontactform button {
     font-family: @font-swatch7-font-family;
     color: @font-swatch7-color;
     font-size: @font-swatch7-font-size;
@@ -521,7 +522,8 @@ blockquote:before {
   CONTACT FORM
    =============================== */
 
-    .widget.contactform fieldset input, .widget.contactform fieldset textarea {
+    .widget.contactform fieldset input, .widget.contactform fieldset textarea,
+    .advancedcontactform input, .advancedcontactform textarea {
         border: 1px solid darken(@color-swatch1,3%);
     }
 
@@ -529,6 +531,26 @@ blockquote:before {
         border: none;
         margin: 4px 0 13px;
         padding: 0;
+    }
+
+    // Advanced Contact Form
+    .advancedcontactform {
+        .label {
+            margin-bottom: 10px;
+        }
+        .input {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        select {
+            margin-top: 10px;
+            height: 42px;
+            border: 1px solid darken(@color-swatch2,25%);
+            position: relative;
+            background: transparent;
+        }
     }
 
 /* ===============================
