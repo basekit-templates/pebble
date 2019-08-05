@@ -1,5 +1,6 @@
 {
     "name":"pebble",
+    "versionTenCompatible": 1,
     "thumbnail":"pebble.png",
     "screenshot":"pebble-screenshot.jpg",
     "templateType":"blog",
